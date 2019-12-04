@@ -1,0 +1,22 @@
+{
+  "name": "Megane for H-Chan",
+  "description": "Убирает размытие с обложек манги на H-Chan",
+  "version": "0.2",
+  "permissions": [
+    "https://*.h-chan.me/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.h-chan.me/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "manifest_version": 2
+}
