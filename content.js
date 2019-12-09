@@ -19,19 +19,19 @@ for(let i = 0; i < images.length; i++){
     //Search page
     if (images[i].src.search("/tags/") != -1){
         fetch(images[i].parentNode.href).then(r => r.text()).then(result => {
-            htmlDocument = parser.parseFromString(result, "text/html");
+            htmlDocument = parser.parseFromString(result, "text/html")
             textareal = htmlDocument.getElementsByTagName('textarea')
 
             tocheck = images[i]
             var z = 0; //checking if this node first or second
             while((tocheck = tocheck.previousSibling) != null) z++;
 
-            console.log(z)
-
             if (z == 1){
                 images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","manganew_thumbs") + ".jpg"
             } else {
-                //TODO: WHAT THE FUCK IS WRONG WITH THEIR STUPID FILE NAMING?!
+                chrome.runtime.sendMessage(result, function(response) { //Hey, background script! I need your help!
+                    images[i].src = response
+                })
             }
         })
     }
