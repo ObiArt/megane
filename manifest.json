@@ -1,7 +1,7 @@
 {
   "name": "Megane for H-Chan",
   "description": "Убирает размытие с обложек манги на H-Chan",
-  "version": "0.4",
+  "version": "0.4.1",
   "permissions": [
     "https://*.h-chan.me/*",
     "http://*.exhentai-dono.me/*"
