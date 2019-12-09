@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         exploit = JSON.parse("{" + result.slice(startingPoint, endingPoint).replace(/'/g, '"') + "}")
         pages = exploit.thumbs
 
-        sendResponse(pages[Math.round(pages.length/2)+1].replace("manganew_webp_thumbs", "manganew_thumbs").replace(".webp", ".jpg"))
+        sendResponse(pages[Math.round(pages.length/2)+1].replace("http://","https://").replace("manganew_webp_thumbs", "manganew_thumbs").replace(".webp", ".jpg"))
     })
     return true
 });

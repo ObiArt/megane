@@ -17,7 +17,7 @@ for(let i = 0; i < images.length; i++){
     }
 
     //Search page
-    if (images[i].src.search("/tags/") != -1){
+    if (images[i].src.search("/tags/") != -1 || images[i].src.search("/series/") != -1 || images[i].src.search("/mangaka/") != -1 || images[i].src.search("/lang/") != -1 || images[i].src.search("/translation/") != -1){
         fetch(images[i].parentNode.href).then(r => r.text()).then(result => {
             htmlDocument = parser.parseFromString(result, "text/html")
             textareal = htmlDocument.getElementsByTagName('textarea')
