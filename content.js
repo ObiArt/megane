@@ -17,7 +17,10 @@ for(let i = 0; i < images.length; i++){
     //Search page
     if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1){
         try{
-            fetch(images[i].parentNode.nextSibling.nextSibling.childNodes[1].childNodes[0].href).then(r => r.text()).then(result => {
+            wheretogo = ""
+            if (images[i].parentNode.nodeName == "A") wheretogo = images[i].parentNode.parentNode.nextSibling.nextSibling.childNodes[3].childNodes[0].href
+            if (images[i].parentNode.nodeName == "DIV") wheretogo = images[i].parentNode.nextSibling.nextSibling.childNodes[1].childNodes[0].href
+            fetch(wheretogo).then(r => r.text()).then(result => {
                 htmlDocument = parser.parseFromString(result, "text/html")
                 textareal = htmlDocument.getElementsByTagName('textarea')
 
@@ -35,7 +38,7 @@ for(let i = 0; i < images.length; i++){
             })
         }
         catch(err){
-            //yep, i don't give a fuck
+            console.log(err)
         }
     }
 
