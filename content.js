@@ -12,28 +12,31 @@ function getFromTextbox(textarea){
 
 for(let i = 0; i < images.length; i++){
     //Home page
-    if (images[i].src.search("_blur") != -1) {
-        images[i].src = images[i].src.replace("manganew_thumbs_blur", "manganew_thumbs")
-    }
+    images[i].src = images[i].src.replace("manganew_thumbs_blur", "manganew_thumbs")
 
     //Search page
-    if (images[i].src.search("?do=search") != -1 || images[i].src.search("/tags/") != -1 || images[i].src.search("/series/") != -1 || images[i].src.search("/mangaka/") != -1 || images[i].src.search("/lang/") != -1 || images[i].src.search("/translation/") != -1){
-        fetch(images[i].parentNode.href).then(r => r.text()).then(result => {
-            htmlDocument = parser.parseFromString(result, "text/html")
-            textareal = htmlDocument.getElementsByTagName('textarea')
+    if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1){
+        try{
+            fetch(images[i].parentNode.nextSibling.nextSibling.childNodes[1].childNodes[0].href).then(r => r.text()).then(result => {
+                htmlDocument = parser.parseFromString(result, "text/html")
+                textareal = htmlDocument.getElementsByTagName('textarea')
 
-            tocheck = images[i]
-            var z = 0; //checking if this node first or second
-            while((tocheck = tocheck.previousSibling) != null) z++;
+                tocheck = images[i]
+                var z = 0; //checking if this node first or second
+                while((tocheck = tocheck.previousSibling) != null) z++;
 
-            if (z == 1){
-                images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","manganew_thumbs") + ".jpg"
-            } else {
-                chrome.runtime.sendMessage(result, function(response) { //Hey, background script! I need your help!
-                    images[i].src = response
-                })
-            }
-        })
+                if (z == 1){
+                    images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","manganew_thumbs") + ".jpg"
+                } else {
+                    chrome.runtime.sendMessage(result, function(response) { //Hey, background script! I need your help!
+                        images[i].src = response
+                    })
+                }
+            })
+        }
+        catch(err){
+            //yep, i don't give a fuck
+        }
     }
 
     //Manga page
