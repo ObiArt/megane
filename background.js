@@ -1,4 +1,4 @@
-const parser = new DOMParser();
+const parser = new DOMParser()
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     htmlDocument = parser.parseFromString(request, "text/html")

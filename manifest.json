@@ -1,15 +1,21 @@
 {
-  "name": "Megane for H-Chan",
-  "description": "Убирает размытие с обложек манги на H-Chan",
-  "version": "0.5.0",
+  "name": "Megane",
+  "description": "Убирает размытие с обложек манги на H-Chan и Nude-Moon",
+  "version": "0.6.0",
   "permissions": [
-    "https://*.h-chan.me/*",
-    "http://*.exhentai-dono.me/*"
+    "*://*.h-chan.me/*",
+    "*://*.exhentai-dono.me/*",
+    "*://*.nude-moon.net/*"
   ],
   "content_scripts": [
     {
       "matches": ["https://*.h-chan.me/*"],
-      "js": ["content.js"],
+      "js": ["chan.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://*.nude-moon.net/*"],
+      "js": ["moon.js"],
       "run_at": "document_end"
     }
   ],

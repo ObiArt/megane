@@ -1,4 +1,4 @@
-const parser = new DOMParser();
+const parser = new DOMParser()
 
 images = document.getElementsByTagName('img')
 
