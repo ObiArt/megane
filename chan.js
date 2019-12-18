@@ -14,7 +14,18 @@ for(let i = 0; i < images.length; i++){
     //Home page
     images[i].src = images[i].src.replace("manganew_thumbs_blur", "manganew_thumbs")
 
-    //Search page
+    //Manga page
+    if (images[i].id == "cover" && images[i].src.search(".html") != -1){
+        var textareal = document.getElementsByTagName('textarea')
+        if (getFromTextbox(textareal) != ""){
+            images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","showfull_retina/manga") + ".jpg"
+        } else {
+            console.log(images[i].parentNode.href)
+            chrome.runtime.sendMessage([null, images[i].parentNode.href], function(response) { //Hey, background script! I need your help!
+                images[i].src = response
+            })
+        }
+    } else //Search page
     if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1 && images[i].src.search(".php") == -1){
         try{
             var wheretogo = ""
@@ -28,10 +39,10 @@ for(let i = 0; i < images.length; i++){
                 var z = 0; //checking if this node first or second
                 while((tocheck = tocheck.previousSibling) != null) z++;
 
-                if (z == 1){
+                if (z == 1 && getFromTextbox(textareal) != ""){
                     images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","manganew_thumbs") + ".jpg"
                 } else {
-                    chrome.runtime.sendMessage(result, function(response) { //Hey, background script! I need your help!
+                    chrome.runtime.sendMessage([result, z], function(response) { //Hey, background script! I need your help!
                         images[i].src = response
                     })
                 }
@@ -40,11 +51,5 @@ for(let i = 0; i < images.length; i++){
         catch(err){
             console.log(err)
         }
-    }
-
-    //Manga page
-    if (images[i].id == "cover" && images[i].src.search(".html") != -1){
-        var textareal = document.getElementsByTagName('textarea')
-        images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","showfull_retina/manga") + ".jpg"
     }
 }
