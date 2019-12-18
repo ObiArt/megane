@@ -15,7 +15,7 @@ for(let i = 0; i < images.length; i++){
     images[i].src = images[i].src.replace("manganew_thumbs_blur", "manganew_thumbs")
 
     //Search page
-    if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1){
+    if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1 && images[i].src.search(".php") == -1){
         try{
             var wheretogo = ""
             if (images[i].parentNode.nodeName == "A") wheretogo = images[i].parentNode.parentNode.nextSibling.nextSibling.childNodes[3].childNodes[0].href
