@@ -1,7 +1,7 @@
 {
   "name": "Megane",
   "description": "Убирает размытие с обложек манги на H-Chan и Nude-Moon",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "permissions": [
     "*://*.h-chan.me/*",
     "*://*.exhentai-dono.me/*",

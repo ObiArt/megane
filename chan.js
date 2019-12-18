@@ -16,11 +16,10 @@ for(let i = 0; i < images.length; i++){
 
     //Manga page
     if (images[i].id == "cover" && images[i].src.search(".html") != -1){
-        var textareal = document.getElementsByTagName('textarea')
+        textareal = document.getElementsByTagName('textarea')
         if (getFromTextbox(textareal) != ""){
             images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","showfull_retina/manga") + ".jpg"
         } else {
-            console.log(images[i].parentNode.href)
             chrome.runtime.sendMessage([null, images[i].parentNode.href], function(response) { //Hey, background script! I need your help!
                 images[i].src = response
             })
