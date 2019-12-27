@@ -1,6 +1,6 @@
 {
   "name": "Megane",
-  "description": "Убирает размытие с обложек манги на H-Chan и Nude-Moon",
+  "description": "Removes blur and other kinds of censorship on h-chan.me and nude-moon.net",
   "version": "0.7.0",
   "permissions": [
     "*://*.h-chan.me/*",
