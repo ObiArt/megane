@@ -1,5 +1,3 @@
-const parser = new DOMParser()
-
 function gettingPage(result, z){
     var startingPoint = result.search('"thumbs":')
     var endingPoint = result.slice(startingPoint, result.length).search("]") + startingPoint + 1
@@ -17,4 +15,4 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         sendResponse(gettingPage(website, request[1]))
     })
     return true
-});
+})

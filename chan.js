@@ -1,5 +1,3 @@
-const parser = new DOMParser()
-
 images = document.getElementsByTagName('img')
 
 for(let i = 0; i < images.length; i++){
@@ -8,14 +6,9 @@ for(let i = 0; i < images.length; i++){
 
     //Manga page
     if (images[i].id == "cover" && images[i].src.search(".html") != -1){
-        textareal = document.getElementsByTagName('textarea')
-        if (getFromTextbox(textareal) != ""){
-            images[i].src = getFromTextbox(textareal).replace("imgcover.", "img.").replace("manganew_thumbs_blur","showfull_retina/manga") + ".jpg"
-        } else {
-            chrome.runtime.sendMessage([null, images[i].parentNode.href], function(response) { //Hey, background script! I need your help!
-                images[i].src = response
-            })
-        }
+        chrome.runtime.sendMessage([images[i].parentNode.href, 1], function(response) { //Hey, background script! I need your help!
+            images[i].src = response.replace("mimg2", "imgcover").replace("manganew_thumbs", "showfull_retina/manga")
+        })
     } else //Search page
     if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1 && images[i].src.search(".php") == -1){
         try{
