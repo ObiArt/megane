@@ -12,8 +12,9 @@
 ### Google Chrome
 1. Качаете последний релиз здесь https://github.com/ObiArt/megane-for-h-chan/releases/latest
 2. Открываете chrome://extensions/
-3. Бросаете в окно архив скачанный в первом пункте
-4. Плагин работает! Ну, до тех пор по хром не скажет что я не заплатил 5$ и не выложил плагин в его стор :/
+3. Включаете в правом верхнем углу Developer Mode (Режим Разработчика)
+4. Бросаете в окно архив скачанный в первом пункте
+5. Плагин работает! Ну, до тех пор по хром не скажет что я не заплатил 5$ и не выложил плагин в его стор :/
 
 ### Microsoft Edge
 Можно скачать из стора аддонов для Edge https://microsoftedge.microsoft.com/addons/detail/ieldcidmneadgefinkaeglpjdfodjife
