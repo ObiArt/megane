@@ -3,9 +3,9 @@
   "description": "Removes blur and other kinds of censorship on hentai-chan and nude-moon",
   "version": "0.8.1",
   "permissions": [
-    "*://*.exhentai-dono.me/*",
-    "*://*.nude-moon.net/*",
-    "*://*.henchan.pro/*"
+    "http://*.exhentai-dono.me/*",
+    "https://*.nude-moon.net/*",
+    "https://*.henchan.pro/*"
   ],
   "content_scripts": [
     {
