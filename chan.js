@@ -7,7 +7,7 @@ for(let i = 0; i < images.length; i++){
     //Manga page
     if (images[i].id == "cover" && images[i].src.search(".html") != -1){
         chrome.runtime.sendMessage([images[i].parentNode.href, 1], function(response) { //Hey, background script! I need your help!
-            images[i].src = response.replace("mimg2", "imgcover").replace("manganew_thumbs", "showfull_retina/manga")
+            images[i].src = response.replace("manganew_thumbs", "showfull_retina/manga")
         })
     } else //Search page
     if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1 && images[i].src.search(".php") == -1){
@@ -19,7 +19,7 @@ for(let i = 0; i < images.length; i++){
             var wheretogo = ""
             if (images[i].parentNode.nodeName == "A") wheretogo = images[i].parentNode.parentNode.nextSibling.nextSibling.childNodes[3].childNodes[0].href
             if (images[i].parentNode.nodeName == "DIV") wheretogo = images[i].parentNode.nextSibling.nextSibling.childNodes[1].childNodes[0].href
-            wheretogo = wheretogo.replace("https://h-chan.me/manga/", "http://exhentai-dono.me/online/") + "?development_access=true"
+            wheretogo = wheretogo.replace("https://henchan.pro/manga/", "http://exhentai-dono.me/online/") + "?development_access=true"
 
             chrome.runtime.sendMessage([wheretogo, z], function(response) { //Hey, background script! I need your help!
                 images[i].src = response
