@@ -7,7 +7,6 @@
 Можно скачать из стора аддонов для Firefox https://addons.mozilla.org/en-US/firefox/addon/megane-for-h-chan/
 
 ### Opera & Yandex Browser
-## НОВАЯ ВЕРСИЯ ПОКА НЕ ПРОШЛА МОДЕРАЦИЮ
 Можно скачать из стора аддонов для Opera https://addons.opera.com/en/extensions/details/megane-for-h-chan/
 
 ### Google Chrome
