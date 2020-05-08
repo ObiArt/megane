@@ -7,6 +7,7 @@
 Можно скачать из стора аддонов для Firefox https://addons.mozilla.org/en-US/firefox/addon/megane-for-h-chan/
 
 ### Opera & Yandex Browser
+## НОВАЯ ВЕРСИЯ ПОКА НЕ ПРОШЛА МОДЕРАЦИЮ
 Можно скачать из стора аддонов для Opera https://addons.opera.com/en/extensions/details/megane-for-h-chan/
 
 ### Google Chrome
@@ -17,6 +18,7 @@
 5. Плагин работает! Ну, до тех пор по хром не скажет, что я не заплатил 5$ и не выложил плагин в его стор :/
 
 ### Microsoft Edge
+## НОВАЯ ВЕРСИЯ ПОКА НЕ ПРОШЛА МОДЕРАЦИЮ
 Можно скачать из стора аддонов для Edge https://microsoftedge.microsoft.com/addons/detail/ieldcidmneadgefinkaeglpjdfodjife
 
 ## Я нашел баг!
