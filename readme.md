@@ -13,7 +13,6 @@
 Можно скачать из стора аддонов для Chrome https://chrome.google.com/webstore/detail/megane/lfoakkpbifjfmbblemcehgmofmjffifd
 
 ### Microsoft Edge
-## НОВАЯ ВЕРСИЯ ПОКА НЕ ПРОШЛА МОДЕРАЦИЮ
 Можно скачать из стора аддонов для Edge https://microsoftedge.microsoft.com/addons/detail/ieldcidmneadgefinkaeglpjdfodjife
 
 ## Я нашел баг!
