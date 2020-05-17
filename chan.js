@@ -10,7 +10,7 @@ for(let i = 0; i < images.length; i++){
             images[i].src = response.replace("manganew_thumbs", "showfull_retina/manga")
         })
     } else //Search page
-    if (images[i].src.search(".jpg") == -1 && images[i].src.search(".png") == -1 && images[i].src.search(".gif") == -1 && images[i].src.search(".webp") == -1 && images[i].src.search(".php") == -1){
+    if (images[i].src.search(/(\.gif)|(\.jpg)|(\.png)|(\.webp)|(\.php)/gi) == -1){
         try{
             var tocheck = images[i]
             var z = 0 //checking if this node first or second (cover or page of the middle)
