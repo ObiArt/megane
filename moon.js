@@ -16,11 +16,11 @@ for(let i = 0; i < images.length; i++){
         var toPaste = `<td class="main-body"><hr><table width="100%"><tbody><tr><td class="bg_style1" width="100%"><font class="news_text"><center>Превью</center></font></td></tr></tbody></table><table width="100%"><tbody><tr><td></td><td><table class="tbl" align="center" border="0" cellpadding="0" cellspacing="10" width="100%">`
         previewed = 0
         fetch("https://cors-anywhere.herokuapp.com/" + wheretogo.href + "?row").then((response) => {
-            return response.text();
+            return response.text()
         }).then((website) => {
             var putItBefore = document.querySelector("body > table:nth-child(2) > tbody > tr > td > table > tbody > tr > td > hr")
             var putItInside = putItBefore.parentNode
-            var reader = parser.parseFromString(website, 'text/html');
+            var reader = parser.parseFromString(website, 'text/html')
             var pages = reader.getElementsByTagName('img')
 
             for (let u = 0; u < pages.length; u++){
