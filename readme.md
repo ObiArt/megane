@@ -10,11 +10,9 @@
 Можно скачать из стора аддонов для Opera https://addons.opera.com/en/extensions/details/megane-for-h-chan/
 
 ### Google Chrome
-#### НОВАЯ ЕЩЕ ВЕРСИЯ НЕ ПРОШЛА МОДЕРАЦИЮ
 Можно скачать из стора аддонов для Chrome https://chrome.google.com/webstore/detail/megane/lfoakkpbifjfmbblemcehgmofmjffifd
 
 ### Microsoft Edge
-#### НОВАЯ ЕЩЕ ВЕРСИЯ НЕ ПРОШЛА МОДЕРАЦИЮ
 Можно скачать из стора аддонов для Edge https://microsoftedge.microsoft.com/addons/detail/ieldcidmneadgefinkaeglpjdfodjife
 
 ## Я нашел баг!
