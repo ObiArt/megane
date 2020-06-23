@@ -29,7 +29,18 @@ for(let i = 0; i < images.length; i++){
     } else if (images[i].src.search(/(\.ru)|(\.gif)|(\.jpg)|(\.png)|(\.webp)|(\.php)|(\.html)/gi) == -1){ //Search page
         //--------------Search page----------------------
         if (images[i].src.search("/?do=search") != -1){
-        
+            var tocheck = images[i]
+            var z = 0 //checking if this node first or second (cover or page in the middle)
+            while((tocheck = tocheck.previousSibling) != null) z++
+
+            var wheretogo = ""
+            if (images[i].parentNode.nodeName == "A") wheretogo = images[i].parentNode.parentNode.nextSibling.nextSibling.childNodes[3].childNodes[0].href
+            if (images[i].parentNode.nodeName == "DIV") wheretogo = images[i].parentNode.nextSibling.nextSibling.childNodes[1].childNodes[0].href
+            wheretogo = wheretogo.replace("https://henchan.pro/manga/", "http://exhentai-dono.me/online/") + "?development_access=true"
+
+            chrome.runtime.sendMessage([wheretogo, z, "reading"], function(response) {
+                images[i].src = response
+            })
         //---------------game covers-----------------
         } else if (images[i].parentElement.href.search("/games/") != -1) {
             toget = images[i].parentElement.href.replace("https://henchan.pro/games/", "http://exhentai-dono.me/download/")
