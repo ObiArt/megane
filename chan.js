@@ -15,7 +15,7 @@ for(let i = 0; i < images.length; i++){
 
         //---------------It's a manga---------------
         } else if (images[i].parentNode.href.search("/online/") != -1){ 
-            chrome.runtime.sendMessage([images[i].parentNode.href, 1, "reading"], function(response) {
+            chrome.runtime.sendMessage([images[i].parentNode.href, null, "download"], function(response) {
                 images[i].src = response.replace("manganew_thumbs", "showfull_retina/manga")
             })
         
