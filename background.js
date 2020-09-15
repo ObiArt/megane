@@ -26,7 +26,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
         //------Download exploit--------
         } else if (request[2] == "download") {
-            sendResponse(gettingCover(website))
+            sendResponse(gettingCover(website, request[1]))
         }
     })
     return true
