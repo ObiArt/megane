@@ -6,11 +6,11 @@
     "http://*.exhentai-dono.me/*",
     "https://*.nude-moon.net/*",
     "https://*.hentaichan.pro/*",
-    "https://*.henchan.pro/*"
+    "https://*.hentaichan.pro/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.henchan.pro/*", "https://*.hentaichan.pro/*"],
+      "matches": ["https://*.hentaichan.pro/*", "https://*.hentaichan.pro/*"],
       "js": ["chan.js"],
       "run_at": "document_end"
     },

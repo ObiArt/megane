@@ -14,7 +14,7 @@ function gettingPage(result, z){ //Online reading exploit
 
 function gettingCover(result){ //Download page exploit
     var downloadpage = parser.parseFromString(result, 'text/html')
-    cover = downloadpage.querySelector(`img[id="cover"]`).src.replace("https://henchan.pro", "").replace("https://img.", "https://")
+    cover = downloadpage.querySelector(`img[id="cover"]`).src.replace("https://hentaichan.pro", "").replace("https://img.", "https://")
     return cover
 }
 
