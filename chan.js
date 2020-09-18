@@ -16,7 +16,8 @@ for(let i = 0; i < images.length; i++){
 
         //---------------It's a manga---------------
         } else if (images[i].parentNode.href.search("/online/") != -1){ 
-            chrome.runtime.sendMessage([images[i].parentNode.href, pageUrl, "download"], function(response) {
+            toget = document.getElementsByClassName("extra_off")[1].childNodes[0].href.replace(`https://${pageUrl}`, "http://exhentai-dono.me") + "?&development_access=true"
+            chrome.runtime.sendMessage([toget, pageUrl, "download"], function(response) {
                 images[i].src = response.replace("manganew_thumbs", "showfull_retina/manga")
             })
         
@@ -37,7 +38,7 @@ for(let i = 0; i < images.length; i++){
             var wheretogo = ""
             if (images[i].parentNode.nodeName == "A") wheretogo = images[i].parentNode.parentNode.nextSibling.nextSibling.childNodes[3].childNodes[0].href
             if (images[i].parentNode.nodeName == "DIV") wheretogo = images[i].parentNode.nextSibling.nextSibling.childNodes[1].childNodes[0].href
-            wheretogo = wheretogo.replace(`https://${pageUrl}/manga/`, "http://exhentai-dono.me/online/") + "?development_access=true"
+            wheretogo = wheretogo.replace(`https://${pageUrl}/manga/`, "http://exhentai-dono.me/online/") + "?&development_access=true"
 
             chrome.runtime.sendMessage([wheretogo, z, "reading"], function(response) {
                 images[i].src = response
