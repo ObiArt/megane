@@ -1,16 +1,17 @@
 {
   "name": "Megane",
   "description": "Removes blur and other kinds of censorship on hentai-chan and nude-moon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "permissions": [
     "http://*.exhentai-dono.me/*",
     "https://*.nude-moon.net/*",
     "https://*.hentaichan.pro/*",
-    "https://*.henchan.pro/*"
+    "https://*.henchan.pro/*",
+    "https://*.hentai-chan.pro/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.henchan.pro/*", "https://*.hentaichan.pro/*"],
+      "matches": ["https://*.henchan.pro/*", "https://*.hentaichan.pro/*", "https://*.hentai-chan.pro/*"],
       "js": ["chan.js"],
       "run_at": "document_end"
     },
