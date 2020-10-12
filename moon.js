@@ -11,8 +11,8 @@ for(let i = 0; i < images.length; i++){
     //17.05.20 Ok I'll leave it as this. Who cares if it doesn't work in Firefox? Who even uses Firefox?
 
     //yaw it's restore time
-    if (images[i].src == "https://nude-moon.net/images/warning.jpg"){
-        images[i].src = "https://github.com/ObiArt/megane/blob/master/icon_128.png?raw=true" //Haha
+    if (images[i].src.search("/images/warning.jpg") !== -1){
+        images[i].src = 'https://raw.githubusercontent.com/ObiArt/megane/master/icon_32.png'
         var toPaste = `<td class="main-body"><hr><table width="100%"><tbody><tr><td class="bg_style1" width="100%"><font class="news_text"><center>Превью</center></font></td></tr></tbody></table><table width="100%"><tbody><tr><td></td><td><table class="tbl" align="center" border="0" cellpadding="0" cellspacing="10" width="100%">`
         previewed = 0
         fetch("https://cors-anywhere.herokuapp.com/" + wheretogo.href + "?row").then((response) => {
@@ -40,7 +40,7 @@ for(let i = 0; i < images.length; i++){
                     }
                 }
             }
-            toPaste += `</table><hr><table align="center"><tbody><tr><td class="button" width="200px"><img src="https://nude-moon.net/images/vote/read.jpg" height="25px"><a href="${wheretogo.href}" target="_self">ЧИТАТЬ ДАЛЕЕ</a></td></tr></tbody></table></td></tr></tbody></table></td>`
+            toPaste += `</table><hr><table align="center"><tbody><tr><td class="button" width="200px"><img src="/pda/images/ico/view.png" height="25px"><a href="${wheretogo.href}" target="_self">ЧИТАТЬ ДАЛЕЕ</a></td></tr></tbody></table></td></tr></tbody></table></td>`
             temp = document.createElement("div")
             temp.innerHTML = toPaste
             toPaste = temp

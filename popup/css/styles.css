@@ -1,0 +1,6 @@
+body {
+    text-align: center;
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+    text-align: -moz-center;
+    text-align: -webkit-center;
+}

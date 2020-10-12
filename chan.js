@@ -1,5 +1,5 @@
-images = document.getElementsByTagName('img')
-pageUrl = document.getElementsByTagName('a')[0].href.match(/(?<=https:\/\/)(.*?)(?=\/)/gm)[0] //Just so I don't have to change all the hentai-chan's urls every time
+var images = document.getElementsByTagName('img')
+var pageUrl = location.href.match(/(?<=https:\/\/)(.*?)(?=\/)/gm)[0]
 
 for(let i = 0; i < images.length; i++){
     //Home page

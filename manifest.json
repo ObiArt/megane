@@ -1,23 +1,22 @@
 {
   "name": "Megane",
   "description": "Removes blur and other kinds of censorship on hentai-chan and nude-moon",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "permissions": [
+    "storage",
+    "activeTab",
     "http://*.exhentai-dono.me/*",
-    "https://*.nude-moon.net/*",
-    "https://*.hentaichan.pro/*",
-    "https://*.henchan.pro/*",
-    "https://*.hentai-chan.pro/*"
+    "https://*/*"
   ],
+  "browser_action": {
+    "default_title": "Megane",
+    "default_popup" : "popup/index.html",
+    "default_icon": "icons/icon_48.png"
+  },
   "content_scripts": [
     {
-      "matches": ["https://*.henchan.pro/*", "https://*.hentaichan.pro/*", "https://*.hentai-chan.pro/*"],
-      "js": ["chan.js"],
-      "run_at": "document_end"
-    },
-    {
-      "matches": ["https://*.nude-moon.net/*"],
-      "js": ["moon.js"],
+      "matches": ["https://*/*"],
+      "js": ["general.js"],
       "run_at": "document_end"
     }
   ],
@@ -26,10 +25,10 @@
     "persistent": false
   },
   "icons": {
-    "16": "icon_16.png",
-    "32": "icon_32.png",
-    "48": "icon_48.png",
-    "128": "icon_128.png"
+    "16": "icons/icon_16.png",
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
   },
   "manifest_version": 2
 }
