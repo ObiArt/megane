@@ -3,4 +3,21 @@ body {
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
     text-align: -moz-center;
     text-align: -webkit-center;
+    background: none;
+    color: #b9bbbe;
+    background-color: #36393f;
+    padding: 10px;
+}
+h1 {
+    color: white;
+}
+input {
+    background-color: #40444b;
+    border: 2px solid #40444b;
+    border-radius: 4px;
+    color: #b9bbbe;
+    padding: 5px;
+}
+input:focus {
+    color: white;
 }
