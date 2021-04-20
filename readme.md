@@ -3,7 +3,7 @@
 
 ## Как установить?
 
-###Firefox
+### Firefox
 Плагин удалили из стора :(
 
 ### Opera & Yandex Browser
