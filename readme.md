@@ -3,8 +3,8 @@
 
 ## Как установить?
 
-### Mozilla Firefox
-Можно скачать из стора аддонов для Firefox https://addons.mozilla.org/en-US/firefox/addon/megane-for-h-chan/
+###Firefox
+Плагин удалили из стора :(
 
 ### Opera & Yandex Browser
 Можно скачать из стора аддонов для Opera https://addons.opera.com/en/extensions/details/megane-for-h-chan/
