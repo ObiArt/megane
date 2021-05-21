@@ -4,7 +4,7 @@
 ## Как установить?
 
 ### Firefox
-Плагин удалили из стора :(
+Скачайте .xpi файл из последней версии плагина https://github.com/ObiArt/megane/releases/latest. Установка начнется автоматически.
 
 ### Opera & Yandex Browser
 Можно скачать из стора аддонов для Opera https://addons.opera.com/en/extensions/details/megane-for-h-chan/
