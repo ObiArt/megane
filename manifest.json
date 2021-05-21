@@ -1,7 +1,7 @@
 {
   "name": "Megane",
   "description": "Removes blur and other kinds of censorship on hentai-chan and nude-moon",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "permissions": [
     "storage",
     "activeTab",
