@@ -1,6 +1,6 @@
 //Setting default values if there's nothing saved at the moment
 chrome.storage.sync.get(['hchan', 'moon'], function (result) {
-    if (result === undefined) {
+    if (result.hchan === undefined) {
         chrome.storage.sync.set({ 'hchan': 'hentai-chan.pro' })
         chrome.storage.sync.set({ 'moon': 'nude-moon.me' })
     }
